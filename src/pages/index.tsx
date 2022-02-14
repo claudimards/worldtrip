@@ -1,9 +1,15 @@
 import { Box, Divider, Heading, Image, SimpleGrid } from "@chakra-ui/react";
 import Head from "next/head";
+import { useEffect } from "react";
+
 import { Carousel } from "../components/Carousel";
 import { Header } from "../components/Header";
 
 export default function Home() {
+  useEffect(() => {
+    fetch("/api/continents").then(response => response.json()).then(data => console.log(data))
+  }, [])
+
   return (
     <>
       <Head>

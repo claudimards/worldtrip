@@ -1,8 +1,8 @@
 import { Box, Heading, Image, Link as ChakraLink, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-import Link from "next/link";
 
 export const Carousel = () => {
   return (
@@ -16,7 +16,7 @@ export const Carousel = () => {
       className="mySwiper"
     >
       <SwiperSlide>
-        <Link href='/city' passHref>
+        <Link href='/continent' passHref>
           <ChakraLink
             position="relative"
             display="block"
@@ -41,7 +41,7 @@ export const Carousel = () => {
       </SwiperSlide>
 
       <SwiperSlide>
-        <Link href='/city' passHref>
+        <Link href='/continent' passHref>
           <ChakraLink
             position="relative"
             display="block"
@@ -66,7 +66,7 @@ export const Carousel = () => {
       </SwiperSlide>
       
       <SwiperSlide>
-        <Link href='/city' passHref>
+        <Link href='/continent' passHref>
           <ChakraLink
             position="relative"
             display="block"
@@ -91,7 +91,7 @@ export const Carousel = () => {
       </SwiperSlide>
       
       <SwiperSlide>
-        <Link href='/city' passHref>
+        <Link href='/continent' passHref>
           <ChakraLink
             position="relative"
             display="block"
@@ -116,7 +116,7 @@ export const Carousel = () => {
       </SwiperSlide>
       
       <SwiperSlide>
-        <Link href='/city' passHref>
+        <Link href='/continent' passHref>
           <ChakraLink
             position="relative"
             display="block"

@@ -1,13 +1,14 @@
+import Head from "next/head";
 import { InfoOutlineIcon } from "@chakra-ui/icons";
 import { Avatar, Box, Flex, Heading, Icon, Image, SimpleGrid, Text, Tooltip } from "@chakra-ui/react";
-import Head from "next/head";
+
 import { Header } from "../components/Header";
 
 export default function City() {
 return (
   <>
     <Head>
-      <title>WorldTrip | City</title>
+      <title>WorldTrip | Continent</title>
     </Head>
 
     <Header goHomeLink={true} />
