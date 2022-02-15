@@ -13,6 +13,7 @@ export function makeServer({ environment = "test" } = {}) {
         {
           id: "1",
           name: "América do Norte",
+          link: "/northamerica",
           carouselUrl: "/images/carousel/northamerica.png",
           bannerUrl: "/images/banner/northamerica.png",
           title: "A América do Norte é um subcontinente",
@@ -87,6 +88,7 @@ export function makeServer({ environment = "test" } = {}) {
         {
           id: "2",
           name: "América do Sul",
+          link: "/southamerica",
           carouselUrl: "/images/carousel/southamerica.png",
           bannerUrl: "/images/banner/southamerica.png",
           title: "O continente tropical",
@@ -119,6 +121,7 @@ export function makeServer({ environment = "test" } = {}) {
         {
           id: "3",
           name: "Ásia",
+          link: "/asia",
           carouselUrl: "/images/carousel/asia.png",
           bannerUrl: "/images/banner/asia.png",
           title: "O maior dos continentes",
@@ -439,6 +442,7 @@ export function makeServer({ environment = "test" } = {}) {
         {
           id: "4",
           name: "África",
+          link: "/africa",
           carouselUrl: "/images/carousel/africa.png",
           bannerUrl: "/images/banner/africa.png",
           title: "Localizado na zona intertropical",
@@ -477,6 +481,7 @@ export function makeServer({ environment = "test" } = {}) {
         {
           id: "5",
           name: "Europa",
+          link: "/europe",
           carouselUrl: "/images/carousel/europe.png",
           bannerUrl: "/images/banner/europe.png",
           title: "O continente mais antigo",
@@ -665,6 +670,7 @@ export function makeServer({ environment = "test" } = {}) {
         {
           id: "6",
           name: "Oceania",
+          link: "/oceania",
           carouselUrl: "/images/carousel/oceania.png",
           bannerUrl: "/images/banner/oceania.png",
           title: "O menor continente da Terra",

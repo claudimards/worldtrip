@@ -2,11 +2,11 @@ import { Box, IconButton, Image } from "@chakra-ui/react"
 import { ChevronLeftIcon } from '@chakra-ui/icons'
 import Link from "next/link"
 
-interface HeaderProps {
+type HeaderProps = {
   goHomeLink?: boolean;
 }
 
-export const Header = ({ goHomeLink = false }) => {
+export const Header = ({ goHomeLink = false }: HeaderProps) => {
   const showGoToHome = goHomeLink
 
   return (
