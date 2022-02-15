@@ -11,9 +11,9 @@ export function makeServer({ environment = "test" } = {}) {
     seeds(server) {
       server.create("continent",
         {
-          id: "1",
+          id: "northamerica",
           name: "América do Norte",
-          link: "/northamerica",
+          link: "northamerica",
           carouselUrl: "/images/carousel/northamerica.png",
           bannerUrl: "/images/banner/northamerica.png",
           title: "A América do Norte é um subcontinente",
@@ -86,9 +86,9 @@ export function makeServer({ environment = "test" } = {}) {
       )
       server.create("continent",
         {
-          id: "2",
+          id: "southamerica",
           name: "América do Sul",
-          link: "/southamerica",
+          link: "southamerica",
           carouselUrl: "/images/carousel/southamerica.png",
           bannerUrl: "/images/banner/southamerica.png",
           title: "O continente tropical",
@@ -119,9 +119,9 @@ export function makeServer({ environment = "test" } = {}) {
       )
       server.create("continent",
         {
-          id: "3",
+          id: "asia",
           name: "Ásia",
-          link: "/asia",
+          link: "asia",
           carouselUrl: "/images/carousel/asia.png",
           bannerUrl: "/images/banner/asia.png",
           title: "O maior dos continentes",
@@ -173,7 +173,7 @@ export function makeServer({ environment = "test" } = {}) {
             },
             {
               name: "Deli",
-              cityImageUrl: "/images/card/Delhi.png",
+              cityImageUrl: "/images/card/delhi.png",
               country: "Índia",
               countryFlagUrl: "/images/flag/india.svg",
             },
@@ -440,9 +440,9 @@ export function makeServer({ environment = "test" } = {}) {
       )
       server.create("continent",
         {
-          id: "4",
+          id: "africa",
           name: "África",
-          link: "/africa",
+          link: "africa",
           carouselUrl: "/images/carousel/africa.png",
           bannerUrl: "/images/banner/africa.png",
           title: "Localizado na zona intertropical",
@@ -479,9 +479,9 @@ export function makeServer({ environment = "test" } = {}) {
       )
       server.create("continent",
         {
-          id: "5",
+          id: "europe",
           name: "Europa",
-          link: "/europe",
+          link: "europe",
           carouselUrl: "/images/carousel/europe.png",
           bannerUrl: "/images/banner/europe.png",
           title: "O continente mais antigo",
@@ -668,14 +668,14 @@ export function makeServer({ environment = "test" } = {}) {
       )
       server.create("continent",
         {
-          id: "6",
+          id: "oceania",
           name: "Oceania",
-          link: "/oceania",
+          link: "oceania",
           carouselUrl: "/images/carousel/oceania.png",
           bannerUrl: "/images/banner/oceania.png",
           title: "O menor continente da Terra",
           text: "A Oceania é o continente com o menor número de pessoas. A população é de 40,9 milhões, mas com um número alto proporcionalmente de línguas vivas: 1.323. Dessas, são apenas 38 institucionalizadas (atrás apenas da América), 354 em desenvolvimento e 347 vigorosas. Já as línguas em apuros somam 358 (bem próxima das em desenvolvimento e das fortalecidas) e mais 226 línguas nesse continente estão morrendo.",
-          countries: 50,
+          countries: 16,
           langagues: 38,
           mostVisitedCities: [
             {
@@ -705,6 +705,16 @@ export function makeServer({ environment = "test" } = {}) {
       this.namespace = "/api/"
 
       this.get("/continents")
+
+      this.get("/continents/:id")
+
+
+      this.passthrough((request) => {
+        if (request.url === "/_next/static/development/_devPagesManifest.json") return true;
+      });
+      this.passthrough((request) => {
+        if (request.url === "/_next/static/development/_devMiddlewareManifest.json") return true;
+      });
     },
   })
 }

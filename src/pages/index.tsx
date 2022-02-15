@@ -27,7 +27,7 @@ export default function Home() {
       setContinents(data)
       
     } catch (error) {
-      alert(`Error to handle request\nError.: ${error}`);
+      alert(`Error to handle request\n${error}`);
     }
   }
 
@@ -44,7 +44,7 @@ export default function Home() {
       <Header />
 
       <Box as="main" mb="10">
-        <Box as="section" mb={20}>
+        <Box as="section" mb={[8, 20]}>
           <Image src="/images/banner.png" alt="Avião voando" width="100%" height="auto" />
         </Box>
 

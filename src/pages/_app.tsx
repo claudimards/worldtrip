@@ -9,9 +9,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../styles/styles.css"
 
-/* if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "development") {
   makeServer({environment: "development"})
-} */
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -10,7 +10,7 @@ export const Header = ({ goHomeLink = false }: HeaderProps) => {
   const showGoToHome = goHomeLink
 
   return (
-    <Box as='header' py={30}>
+    <Box as='header' py={[15, 30]}>
       <Box maxWidth={1270} px={15} mx='auto' position='relative'>
         {showGoToHome && (
           <Link href='/' passHref>
