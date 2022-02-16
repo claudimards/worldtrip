@@ -64,16 +64,16 @@ export default function Continent() {
         <Box as='main' mb={8}>
           <Banner name={continentContent.name} image={continentContent.bannerUrl} />
 
-          <Box as='section' maxWidth={1190} px={15} mx='auto' my='80px'>
-            <Flex>
+          <Box as='section' maxWidth={1190} px={15} mx='auto' my={['32px', '80px']}>
+            <Flex flexDirection={['column', 'row']}>
               <Box flex='1'>
-                <Text maxW={600} mr='auto' fontSize='2xl' fontWeight='400' color='#47585B' textAlign='justify'>
+                <Text maxW={600} mr='auto' fontSize={['sm', '2xl']} fontWeight='400' color='#47585B' textAlign='justify'>
                   {continentContent.text}
                 </Text>
               </Box>
 
-              <Box flex='1' maxW={490} margin='0 auto'>
-                <Flex justifyContent='space-between' alignItems='center' height='100%'>
+              <Box flex='1' w="100%" maxW={490} margin={['16px auto 0', '0 auto']}>
+                <Flex justifyContent='space-between' alignItems={['center']} height='100%'>
 
                   <ContinentInfo title="países" quantity={continentContent.countries} />
                   <ContinentInfo title="línguas" quantity={continentContent.langagues} />
@@ -89,9 +89,9 @@ export default function Continent() {
           </Box>
 
           <Box as='section' maxWidth={1190} px={15} mx='auto'>
-            <Heading as='h2' fontWeight='500' color='#47585B' mb='40px'>Cidades +100</Heading>
+            <Heading as='h2' fontSize={['2xl', '3xl']} fontWeight='500' color='#47585B' mb={['20px', '40px']}>Cidades +100</Heading>
             
-            <SimpleGrid columns={4} spacing={10}>
+            <SimpleGrid columns={[1, 2, 3, 4]} spacing={10}>
 
               {continentContent.mostVisitedCities.map(city => (
 

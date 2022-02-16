@@ -17,7 +17,18 @@ export const Banner = ({ name, image }: Banner) => {
       bg: '#1c140159'
     }}>
       <Image src={image} alt={name} width="100%" height="auto" />
-      <Heading fontSize='5xl' fontWeight='600' color='#F5F8FA' lineHeight='72px' position='absolute' left='140px' bottom='60px'>{name}</Heading>
+      <Heading
+        fontSize={['2xl', '5xl']}
+        fontWeight='600' color='#F5F8FA'
+        lineHeight={['42px', '72px']}
+        position='absolute'
+        left={['50%', '140px']}
+        bottom={['50%', '60px']}
+        transform={['translate(-50%, 50%)', 'translate(0, 0)']}
+        w="max-content"
+      >
+        {name}
+      </Heading>
     </Box>
   )
 }

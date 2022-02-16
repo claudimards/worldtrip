@@ -9,7 +9,7 @@ type CityCard = {
 
 export const CityCard = ({ name, cityImageUrl, country, countryFlagUrl }: CityCard) => {
   return (
-    <Box border='1px solid #FFBA08' borderRadius={5}>
+    <Box border='1px solid #FFBA08' borderRadius={5} maxW={256} w="100%" margin="0 auto">
       <Image
         objectFit='cover'
         src={cityImageUrl}

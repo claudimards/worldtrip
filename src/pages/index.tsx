@@ -1,4 +1,4 @@
-import { Box, Divider, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Divider, Heading, Image, SimpleGrid, Text, useBreakpointValue } from "@chakra-ui/react";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { api } from "../api";
@@ -17,6 +17,17 @@ type Continents = {
 
 export default function Home() {
   const [continents, setContinents] = useState<Continents[]>([]);
+
+  let bannerImg = "/images/banner.png";
+
+  const isMobile = useBreakpointValue({
+    base: true,
+    md: false
+  })
+
+  if (isMobile) {
+    bannerImg = "/images/banner-mobile.png"
+  }
 
   const getContinents = async () => {
     try {
@@ -43,12 +54,12 @@ export default function Home() {
 
       <Header />
 
-      <Box as="main" mb="10">
+      <Box as="main" mb={["6", "10"]}>
         <Box as="section" mb={[8, 20]}>
-          <Image src="/images/banner.png" alt="Avião voando" width="100%" height="auto" />
+          <Image src={bannerImg} alt="Avião voando" width="100%" height="auto" />
         </Box>
 
-        <SimpleGrid as="section" columns={5} alignItems="center" justifyContent="space-between" maxWidth={1270} px={15} mx="auto">
+        <SimpleGrid as="section" columns={[2, 5]} alignItems="center" justifyContent="space-between" maxWidth={1270} px={15} mx="auto">
 
           <Hobby hobby="vida noturna" image="cocktail" />
           <Hobby hobby="praia" image="surf" />
@@ -58,10 +69,10 @@ export default function Home() {
 
         </SimpleGrid>
 
-        <Divider width={90} height="0.5" bg="#47585B" mx="auto" mt={20} mb={12} />
+        <Divider width={90} height="0.5" bg="#47585B" mx="auto" mt={[8, 20]} mb={[6, 12]} />
 
-        <Box as="section" maxWidth={1270} px={15} mx="auto">
-          <Heading as="h1" fontWeight={500} lineHeight="54px" maxW={840} mx="auto" textAlign="center" mb={12} color="#47585B">
+        <Box as="section" maxWidth={1270} px={[0, 15]} mx="auto">
+          <Heading as="h1" fontSize={["xl", "4xl"]} fontWeight={500} lineHeight={["30px", "54px"]} maxW={840} mx="auto" textAlign="center" mb={[5, 12]} color="#47585B">
             Vamos nessa?<br/>Então escolha seu continente
           </Heading>
 

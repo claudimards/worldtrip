@@ -26,6 +26,7 @@ export const Header = ({ goHomeLink = false }: HeaderProps) => {
               p='0'
               color='#47585B'
               fontWeight='500'
+              fontSize="2xl"
             />
           </Link>
         )}

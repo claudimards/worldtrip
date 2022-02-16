@@ -26,3 +26,14 @@
 .swiper-pagination-bullet-active {
   background: #ffba08;
 }
+
+@media screen and (max-width: 425px) {
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: 10px;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: 10px;
+  }
+}

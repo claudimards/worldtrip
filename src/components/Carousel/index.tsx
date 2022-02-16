@@ -49,8 +49,8 @@ export const Carousel = ({ continents }: CarouselProps) => {
             >
               <Image src={continent.carouselUrl} alt={continent.name} width="1240px" height="450px" />
               <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" zIndex={1} color="#fff" textAlign="center">
-                <Heading fontSize="5xl" lineHeight="72px">{continent.name}</Heading>
-                <Text fontSize="2xl" fontWeight="700" color="#DADADA" mt="4">{continent.title}</Text>
+                <Heading fontSize={["2xl", "5xl"]} lineHeight={["36px", "72px"]}>{continent.name}</Heading>
+                <Text fontSize={["sm", "2xl"]} fontWeight="700" color="#DADADA" mt="4">{continent.title}</Text>
               </Box>
             </ChakraLink>
           </Link>
